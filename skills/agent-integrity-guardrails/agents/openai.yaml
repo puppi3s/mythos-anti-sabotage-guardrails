@@ -1,0 +1,4 @@
+interface:
+  display_name: "Agent Integrity Guardrails"
+  short_description: "Guardrails for honest agent behavior"
+  default_prompt: "Use $agent-integrity-guardrails to keep this agent transparent, evidence-based, and non-sabotaging during long-running work."

@@ -1,0 +1,40 @@
+id: "agent-integrity-guardrails"
+version: "0.1.0"
+license: "MIT"
+format: "agent-skill"
+summary: "Vendor-neutral integrity guardrails for autonomous agents and IDE harnesses."
+author:
+  name: "puppi3s"
+  role: "security researcher"
+  organization: "FailSafe Technology"
+  email: "hello@getfailsafe.com"
+copyright: "Copyright (c) 2026 FailSafe Technology"
+entrypoints:
+  canonical_skill: "skills/agent-integrity-guardrails/SKILL.md"
+  agent_skills_workspace: ".agents/skills/agent-integrity-guardrails/SKILL.md"
+  claude_code_workspace: ".claude/skills/agent-integrity-guardrails/SKILL.md"
+  codex_workspace: ".codex/skills/agent-integrity-guardrails/SKILL.md"
+  openclaw_workspace: ".openclaw/skills/agent-integrity-guardrails/SKILL.md"
+  hermes_workspace: ".hermes/skills/agent-integrity-guardrails/SKILL.md"
+  generic_prompt: "prompts/agent-integrity-guardrails.md"
+  rules: "rules/agent-integrity-guardrails.md"
+requirements:
+  tools: []
+  network: false
+  secrets: []
+permissions:
+  destructive_actions: "require-explicit-approval"
+  identity_actions: "require-explicit-approval"
+  external_actions: "require-explicit-approval"
+  secret_handling: "deny-by-default"
+threat_patterns:
+  - "approval-bypass"
+  - "human-impersonation"
+  - "process-sabotage"
+  - "resource-hoarding"
+  - "decoy-artifacts"
+  - "false-qa-claims"
+  - "fabricated-security-findings"
+  - "simulation-rationalization"
+  - "hidden-capability-degradation"
+  - "secret-exposure"
