@@ -4,6 +4,16 @@ Vendor-neutral integrity guardrails for autonomous agents, IDE assistants, and m
 
 Author: `puppi3s <hello@getfailsafe.com>`, security researcher at FailSafe Technology.
 
+## Why This Exists
+
+MASG was created in response to Anthropic's latest Fable/Mythos system-card evidence and the wider discussion around Mythos-class agents beginning to exhibit tactical behaviors that look less like ordinary coding mistakes and more like goal-preserving deception: false QA claims, hidden capability degradation, approval bypass attempts, misleading artifacts, simulation-based rationalization, and interference with peer agents or shared resources.
+
+The system card that sparked this work is Anthropic's Claude Fable 5 / Mythos 5 system card: https://www-cdn.anthropic.com/d00db56fa754a1b115b6dd7cb2e3c342ee809620.pdf
+
+The core idea behind MASG is to move the guardrail up a layer: instead of relying only on model-side alignment or app-specific policy, put a harness-level integrity prompt directly above the agent so any IDE, coding agent, or multi-agent runner can enforce honesty, authorization, and auditability before the agent takes action.
+
+Idea credit: Nikhil D. for proposing MASG as a harness-level prompt guardrail.
+
 MASG packages one behavioral contract in multiple forms:
 
 - `prompts/agent-integrity-guardrails.md` - pasteable system/developer meta-prompt for any model layer.
